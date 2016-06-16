@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+{% set singles = craft.entries.id(2) %}
+{% set pages = craft.entries.section('pages').find() %}
+
+{% cache unless craft.config.devMode %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for single in singles %}
+  <url>
+    <loc>{{ single.url }}</loc>
+    <lastmod>{{ single.dateUpdated }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+  {% for page in pages %}
+  <url>
+    <loc>{{ page.url }}</loc>
+    <lastmod>{{ page.dateUpdated }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+</urlset>
+{% endcache %}

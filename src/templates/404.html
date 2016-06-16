@@ -1,0 +1,17 @@
+{# 404 page template #}
+
+{% extends "_layouts/_base" %}
+
+{% set title = "404" %}
+{% set description = "A pretty standard 404 page." %}
+
+{% block content %}
+  <section class="page">
+    <div class="inner">
+      <article>
+      	<h1>Page not found</h1>
+      	<p>That page doesn't exist (or I deleted it). <a href="/">Let's try again, okay?</a></p>
+      </article>
+    </div>
+  </section>
+{% endblock %}

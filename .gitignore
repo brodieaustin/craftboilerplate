@@ -1,0 +1,24 @@
+#configs
+.vagrant/
+
+#craft folders
+craft/app/
+craft/plugins/
+craft/storage/
+craft/config/db.php
+craft/config/license.key
+
+#node/gulp files
+node_modules/
+.sass-cache/
+
+#user upload folders
+public/assets/img/entries/
+public/assets/img/hero/
+public/assets/docs/
+
+#db backups
+*.sql
+
+#miscellaneous files
+readme.txt
